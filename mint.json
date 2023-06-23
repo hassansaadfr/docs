@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "openapi": "https://app.allisone.ai/api/v2/swagger/json",
+  "openapi": "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/api-with-examples.yaml",
   "name": "Starter Kit",
   "logo": {
     "dark": "/logo/dark.svg",
