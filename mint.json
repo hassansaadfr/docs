@@ -1,5 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
+  "openapi": "https://gist.githubusercontent.com/hassansaadfr/8b371f26153764e04f6059c6bdf4e0be/raw/01507bdf366b7995db492de30b88960f7e09ae10/toto.json",
   "name": "Starter Kit",
   "logo": {
     "dark": "/logo/dark.svg",
