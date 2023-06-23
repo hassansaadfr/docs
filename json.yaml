@@ -1,4 +1,4 @@
-swagger: '2.0'
+swagger: "2.0"
 info:
   title: Allisone API
   version: 1.7.1
@@ -202,153 +202,153 @@ paths:
                 type: array
                 description: An array of teeth containing decays
                 example:
-                  - '11'
-                  - '12'
-                  - '13'
+                  - "11"
+                  - "12"
+                  - "13"
                 items: {}
               CROWN:
                 type: array
                 description: An array of teeth containing crowns
                 example:
-                  - '33'
-                  - '45'
-                  - '31'
-                  - '25'
+                  - "33"
+                  - "45"
+                  - "31"
+                  - "25"
                 items: {}
               MISSING_TOOTH:
                 type: array
                 description: An array of missing teeth
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               ROOT_CANAL:
                 type: array
                 description: An array of endodontics treatments (root canals)
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               IMPLANT:
                 type: array
                 description: An array of implants
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               INLAY_CORE:
                 type: array
                 description: An array of inlay cores
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               PERI_APICAL_LESION:
                 type: array
                 description: An array of peri apical lesions
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               ROOT:
                 type: array
                 description: An array of roots
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               FILLING:
                 type: array
                 description: An array of fillings
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               AMALGAM:
                 type: array
                 description: An array of amalgams
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               INLAY:
                 type: array
                 description: An array of inlays-onlays
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               VENEER:
                 type: array
                 description: An array of veneers
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               SCREW_POST:
                 type: array
                 description: An array of screw posts
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               POST:
                 type: array
                 description: An array of posts
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               BRIDGE:
                 type: array
                 description: An array of missing teeth
                 example:
                   - tooth_numbers:
-                      - '16'
-                      - '15'
-                      - '14'
-                      - '13'
+                      - "16"
+                      - "15"
+                      - "14"
+                      - "13"
                     pillar_teeth:
-                      - '15'
-                      - '13'
+                      - "15"
+                      - "13"
                     bridge_teeth:
-                      - '16'
-                      - '14'
+                      - "16"
+                      - "14"
                     anomaly_teeth: []
                   - tooth_numbers:
-                      - '23'
-                      - '24'
+                      - "23"
+                      - "24"
                     pillar_teeth:
-                      - '24'
+                      - "24"
                     bridge_teeth:
-                      - '23'
+                      - "23"
                     anomaly_teeth: []
                 items: {}
-  /api/v2/diagnostic/{id}:
+  /api/v2/diagnostic/:
     get:
       description: Get diagnostic by ID
       tags:
@@ -428,150 +428,150 @@ paths:
                 type: array
                 description: An array of teeth containing decays
                 example:
-                  - '11'
-                  - '12'
-                  - '13'
+                  - "11"
+                  - "12"
+                  - "13"
                 items: {}
               CROWN:
                 type: array
                 description: An array of teeth containing crowns
                 example:
-                  - '33'
-                  - '45'
-                  - '31'
-                  - '25'
+                  - "33"
+                  - "45"
+                  - "31"
+                  - "25"
                 items: {}
               MISSING_TOOTH:
                 type: array
                 description: An array of missing teeth
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               ROOT_CANAL:
                 type: array
                 description: An array of endodontics treatments (root canals)
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               IMPLANT:
                 type: array
                 description: An array of implants
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               INLAY_CORE:
                 type: array
                 description: An array of inlay cores
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               PERI_APICAL_LESION:
                 type: array
                 description: An array of peri apical lesions
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               ROOT:
                 type: array
                 description: An array of roots
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               FILLING:
                 type: array
                 description: An array of fillings
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               AMALGAM:
                 type: array
                 description: An array of amalgams
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               INLAY:
                 type: array
                 description: An array of inlays-onlays
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               VENEER:
                 type: array
                 description: An array of veneers
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               SCREW_POST:
                 type: array
                 description: An array of screw posts
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               POST:
                 type: array
                 description: An array of posts
                 example:
-                  - '18'
-                  - '28'
-                  - '38'
-                  - '48'
+                  - "18"
+                  - "28"
+                  - "38"
+                  - "48"
                 items: {}
               BRIDGE:
                 type: array
                 description: An array of missing teeth
                 example:
                   - tooth_numbers:
-                      - '16'
-                      - '15'
-                      - '14'
-                      - '13'
+                      - "16"
+                      - "15"
+                      - "14"
+                      - "13"
                     pillar_teeth:
-                      - '15'
-                      - '13'
+                      - "15"
+                      - "13"
                     bridge_teeth:
-                      - '16'
-                      - '14'
+                      - "16"
+                      - "14"
                     anomaly_teeth: []
                   - tooth_numbers:
-                      - '23'
-                      - '24'
+                      - "23"
+                      - "24"
                     pillar_teeth:
-                      - '24'
+                      - "24"
                     bridge_teeth:
-                      - '23'
+                      - "23"
                     anomaly_teeth: []
                 items: {}
   /api/v2/partner/patient:
@@ -590,7 +590,7 @@ paths:
                 type: object
                 description: Data
                 example:
-                  - id: '42'
+                  - id: "42"
                     foo: bar
             required:
               - data
@@ -674,11 +674,6 @@ paths:
         default:
           description: Default Response
           schema:
-            properties:
-              id:
-                id: string
-                example: 93bad00a-ce65-4bbd-bdbc-1dc04ef971c7
-                description: Patient ID
             type: object
   /api/v2/partner/patient/{id}:
     get:
@@ -816,7 +811,7 @@ paths:
                       date-time as described in
                       https://www.rfc-editor.org/rfc/rfc3339#section-5.6
                     example:
-                      - '1970-01-01T00:00:00+00:00'
+                      - "1970-01-01T00:00:00+00:00"
                   sex:
                     type: string
                     pattern: ^[M|F]$
@@ -984,7 +979,7 @@ paths:
                       date-time as described in
                       https://www.rfc-editor.org/rfc/rfc3339#section-5.6
                     example:
-                      - '1970-01-01T00:00:00+00:00'
+                      - "1970-01-01T00:00:00+00:00"
                   sex:
                     type: string
                     pattern: ^[M|F]$
@@ -1302,7 +1297,7 @@ paths:
               id:
                 type: string
                 description: Treatment ID
-                example: '42'
+                example: "42"
               created:
                 type: string
                 description: creation date
@@ -1312,27 +1307,27 @@ paths:
                 description: Array of operations
                 example:
                   - - information:
-                        id: '42'
+                        id: "42"
                         practitioner: John Doe
                         action_type: Bridge
                         released_at: >-
                           Thu Mar 31 2022 01:43:46 GMT-0700 (Pacific Daylight
                           Time)
-                        canceled: 'false'
+                        canceled: "false"
                       teeth:
-                        - '11'
-                        - '12'
-                        - '13'
+                        - "11"
+                        - "12"
+                        - "13"
                     - information:
-                        id: '43'
+                        id: "43"
                         practitioner: John Doe
                         action_type: Extraction
                         released_at: >-
                           Thu Mar 31 2022 01:43:46 GMT-0700 (Pacific Daylight
                           Time)
-                        canceled: 'true'
+                        canceled: "true"
                       tooth_location:
-                        - '14'
+                        - "14"
                 items: {}
   /api/v2/confirmUpload/{key}:
     get:
@@ -1404,7 +1399,7 @@ paths:
 
           label: Python
       responses:
-        '200':
+        "200":
           description: Default Response
   /api/v2/getUploadURL:
     post:
