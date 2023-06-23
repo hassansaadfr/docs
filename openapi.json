@@ -43,23 +43,6 @@
 						"description": "Bearer token"
 					}
 				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request POST 'http://localhost:5000/api/v2/diagnostic' \\\n--header 'Authorization: Bearer BEARER_TOKEN' \\\n--form 'file=@\"/path/FILENAME.png\"'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar fs = require('fs');\nvar options = {\n  'method': 'POST',\n  'url': 'http://localhost:5000/api/v2/diagnostic',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  formData: {\n    'file': {\n      'value': fs.createReadStream('/path/FILENAME.png'),\n      'options': {\n        'filename': 'FILENAME.png',\n        'contentType': null\n      }\n    }\n  }\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\n\nurl = \"http://localhost:5000/api/v2/diagnostic\"\n\npayload={}\nfiles=[\n  ('file',('FILENAME.png',open('/path/FILENAME.png','rb'),'image/png'))\n]\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload, files=files)\n\nprint(response.text)\n",
-						"label": "Python"
-					}
-				],
 				"responses": {
 					"400": {
 						"description": "Default Response",
@@ -297,23 +280,6 @@
 						"name": "authorization",
 						"required": true,
 						"description": "Bearer token"
-					}
-				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request GET 'http://localhost:5000/api/v2/diagnostic/{id}' \\\n--header 'Authorization: Bearer BEARER_TOKEN'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'GET',\n  'url': 'http://localhost:5000/api/v2/diagnostic/{id}',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  formData: {}\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\n\nurl = \"http://localhost:5000/api/v2/diagnostic/{id}\"\n\npayload={}\nfiles={}\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload, files=files)\n\nprint(response.text)\n\n",
-						"label": "Python"
 					}
 				],
 				"responses": {
@@ -575,23 +541,6 @@
 						"description": "Bearer token"
 					}
 				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request POST 'http://localhost:5000/api/v2/partner/patient' \\\n--header 'Authorization: Bearer BEARER_TOKEN' --header 'Content-Type: application/json' --data-raw '{\n    \"data\": {\n        \"id\": \"PATIENT_ID\",\n        \"extraId\": \"OTHER_UNIQUE_ID\"\n    }\n}'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'POST',\n  'url': 'http://localhost:5000/api/v2/partner/patient',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN',\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({\n    \"data\": {\n      \"id\": \"PATIENT_ID\",\n      \"extraId\": \"OTHER_UNIQUE_ID\"\n    }\n  })\n};\n\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\nimport json\n\nurl = \"http://localhost:5000/api/v2/partner/patient\"\n\npayload = json.dumps({\n  \"data\": {\n    \"id\": \"PATIENT_ID\",\n    \"extraId\": \"OTHER_UNIQUE_ID\"\n  }\n})\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN',\n  'Content-Type': 'application/json'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n\n",
-						"label": "Python"
-					}
-				],
 				"responses": {
 					"400": {
 						"description": "Default Response",
@@ -659,23 +608,6 @@
 						"name": "authorization",
 						"required": true,
 						"description": "Bearer token"
-					}
-				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request GET 'http://localhost:5000/api/v2/patient/{id}' \\\n--header 'Authorization: Bearer BEARER_TOKEN'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'GET',\n  'url': 'http://localhost:5000/api/v2/patient/{id}',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  formData: {}\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\n\nurl = \"http://localhost:5000/api/v2/patient/{id}\"\n\npayload={}\nfiles={}\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload, files=files)\n\nprint(response.text)\n\n",
-						"label": "Python"
 					}
 				],
 				"responses": {
@@ -832,23 +764,6 @@
 						"description": "Bearer token"
 					}
 				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location -g --request PUT 'http://localhost:5000/api/v2/patient/{id}' --header 'Authorization: Bearer BEARER_TOKEN' --header 'Content-Type: application/json' --data-raw '{\n    \"patient\": {\n        \"firstname\": \"foo\",\n        \"lastname\": \"bar\",\n        \"sex\": \"M\",\n        \"birthdate\": \"1970-01-01T00:00:00+00:00\",\n        \"email\": \"foo@bar.com\"\n    },\n    \"data\": { \"id\":1234, \"otherId\":1234, \"foo\": \"bar\" }\n}'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar myHeaders = new Headers();\nmyHeaders.append(\"Authorization\", \"Bearer BEARER_TOKEN\");\nmyHeaders.append(\"Content-Type\", \"application/json\");\n\nvar raw = JSON.stringify({\n  \"patient\": {\n    \"firstname\": \"foo\",\n    \"lastname\": \"bar\",\n    \"sex\": \"M\",\n    \"birthdate\": \"1970-01-01T00:00:00+00:00\",\n    \"email\": \"foo@bar.com\"\n  },\n  \"data\": {\n    \"id\": 1234,\n    \"otherId\": 1234,\n    \"foo\": \"bar\"\n  }\n});\n\nvar requestOptions = {\n  method: 'PUT',\n  headers: myHeaders,\n  body: raw,\n  redirect: 'follow'\n};\n\nfetch(\"http://localhost:5000/api/v2/patient/{id}\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\nimport json\n\nurl = \"http://localhost:5000/api/v2/patient/{id}\"\n\npayload = json.dumps({\n  \"patient\": {\n    \"firstname\": \"foo\",\n    \"lastname\": \"bar\",\n    \"sex\": \"M\",\n    \"birthdate\": \"1970-01-01T00:00:00+00:00\",\n    \"email\": \"foo@bar.com\"\n  },\n  \"data\": {\n    \"id\": 1234,\n    \"otherId\": 1234,\n    \"foo\": \"bar\"\n  }\n})\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN',\n  'Content-Type': 'application/json'\n}\n\nresponse = requests.request(\"PUT\", url, headers=headers, data=payload)\n\nprint(response.text)\n",
-						"label": "Python"
-					}
-				],
 				"responses": {
 					"400": {
 						"description": "Default Response",
@@ -991,23 +906,6 @@
 						"description": "Bearer token"
 					}
 				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location -g --request PATCH 'http://localhost:5000/api/v2/patient/{id}' --header 'Authorization: Bearer BEARER_TOKEN' --header 'Content-Type: application/json' --data-raw '{\n    \"patient\": {\n        \"firstname\": \"foo\",\n        \"lastname\": \"bar\",\n        \"sex\": \"M\",\n        \"birthdate\": \"1970-01-01T00:00:00+00:00\",\n        \"email\": \"foo@bar.com\"\n    },\n    \"data\": { \"id\":1234, \"otherId\":1234, \"foo\": \"bar\" }\n}'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar myHeaders = new Headers();\nmyHeaders.append(\"Authorization\", \"Bearer BEARER_TOKEN\");\nmyHeaders.append(\"Content-Type\", \"application/json\");\n\nvar raw = JSON.stringify({\n  \"patient\": {\n    \"firstname\": \"foo\",\n    \"lastname\": \"bar\",\n    \"sex\": \"M\",\n    \"birthdate\": \"1970-01-01T00:00:00+00:00\",\n    \"email\": \"foo@bar.com\"\n  },\n  \"data\": {\n    \"id\": 1234,\n    \"otherId\": 1234,\n    \"foo\": \"bar\"\n  }\n});\n\nvar requestOptions = {\n  method: 'PATCH',\n  headers: myHeaders,\n  body: raw,\n  redirect: 'follow'\n};\n\nfetch(\"http://localhost:5000/api/v2/patient/{id}\", requestOptions)\n  .then(response => response.text())\n  .then(result => console.log(result))\n  .catch(error => console.log('error', error));\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\nimport json\n\nurl = \"http://localhost:5000/api/v2/patient/{id}\"\n\npayload = json.dumps({\n  \"patient\": {\n    \"firstname\": \"foo\",\n    \"lastname\": \"bar\",\n    \"sex\": \"M\",\n    \"birthdate\": \"1970-01-01T00:00:00+00:00\",\n    \"email\": \"foo@bar.com\"\n  },\n  \"data\": {\n    \"id\": 1234,\n    \"otherId\": 1234,\n    \"foo\": \"bar\"\n  }\n})\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN',\n  'Content-Type': 'application/json'\n}\n\nresponse = requests.request(\"PATCH\", url, headers=headers, data=payload)\n\nprint(response.text)\n",
-						"label": "Python"
-					}
-				],
 				"responses": {
 					"400": {
 						"description": "Default Response",
@@ -1097,23 +995,6 @@
 						"name": "authorization",
 						"required": true,
 						"description": "Bearer token"
-					}
-				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request GET 'http://localhost:5000/api/v2/patients' \\\n--header 'Authorization: Bearer BEARER_TOKEN'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'GET',\n  'url': 'http://localhost:5000/api/v2/patients',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  formData: {}\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\n\nurl = \"http://localhost:5000/api/v2/patients\"\n\npayload={}\nfiles={}\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload, files=files)\n\nprint(response.text)\n\n",
-						"label": "Python"
 					}
 				],
 				"responses": {
@@ -1230,23 +1111,6 @@
 						"description": "Bearer token"
 					}
 				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request GET 'http://localhost:5000/api/v2/confirmUpload/{key}' \\\n--header 'Authorization: Bearer BEARER_TOKEN'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'GET',\n  'url': 'http://localhost:5000/api/v2/confirmUpload/{key}',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  formData: {}\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\n\nurl = \"http://localhost:5000/api/v2/confirmUpload/{key}\"\n\npayload={}\nfiles={}\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload, files=files)\n\nprint(response.text)\n\n",
-						"label": "Python"
-					}
-				],
 				"responses": {
 					"400": {
 						"description": "Default Response",
@@ -1312,23 +1176,6 @@
 						"name": "authorization",
 						"required": true,
 						"description": "Bearer token"
-					}
-				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location --request GET 'http://localhost:5000/api/v2/treatment/{id}' \\\n--header 'Authorization: Bearer BEARER_TOKEN'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'GET',\n  'url': 'http://localhost:5000/api/v2/treatment/{id}',\n  'headers': {\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  formData: {}\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\n\nurl = \"http://localhost:5000/api/v2/treatment/{id}\"\n\npayload={}\nfiles={}\nheaders = {\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"GET\", url, headers=headers, data=payload, files=files)\n\nprint(response.text)\n\n",
-						"label": "Python"
 					}
 				],
 				"responses": {
@@ -1454,23 +1301,6 @@
 						"name": "authorization",
 						"required": true,
 						"description": "Bearer token"
-					}
-				],
-				"x-codeSamples": [
-					{
-						"lang": "cURL",
-						"source": "\ncurl --location 'http://localhost:5000/api/v2/getUploadURL' --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'Authorization: Bearer BEARER_TOKEN' --data '{\n  \"patientId\": \"ID\",\n  \"contentType\":\"application/dicom\"\n}'\n",
-						"label": "cURL"
-					},
-					{
-						"lang": "Node",
-						"source": "\nvar request = require('request');\nvar options = {\n  'method': 'POST',\n  'url': 'http://localhost:5000/api/v2/getUploadURL',\n  'headers': {\n    'Content-Type': 'application/json',\n    'Accept': 'application/json',\n    'Authorization': 'Bearer BEARER_TOKEN'\n  },\n  body: JSON.stringify({\n    \"patientId\": \"ID\",\n    \"contentType\": \"application/dicom\"\n  })\n\n};\nrequest(options, function (error, response) {\n  if (error) throw new Error(error);\n  console.log(response.body);\n});\n\n",
-						"label": "Node"
-					},
-					{
-						"lang": "Python2.7",
-						"source": "\nimport requests\nimport json\n\nurl = \"http://localhost:5000/api/v2/getUploadURL\"\n\npayload = json.dumps({\n  \"patientId\": \"ID\",\n  \"contentType\": \"application/dicom\"\n})\nheaders = {\n  'Content-Type': 'application/json',\n  'Accept': 'application/json',\n  'Authorization': 'Bearer BEARER_TOKEN'\n}\n\nresponse = requests.request(\"POST\", url, headers=headers, data=payload)\n\nprint(response.text)\n\n",
-						"label": "Python"
 					}
 				],
 				"responses": {
